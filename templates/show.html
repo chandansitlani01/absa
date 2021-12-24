@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+	span {
+  text-decoration: underline;
+  -webkit-text-decoration-color: grey; /* safari still uses vendor prefix */
+  text-decoration-color: grey;
+}
+
+</style>
+</head>
+<body>
+	
+  <div class="row">
+  <div class="row">
+  <center>
+  <div class="col offset-s3 s6 red-text">
+  <h2>Sentiment Analysis</h2>
+  </div>
+  </div>
+    <form class="col offset-s3 s12" action="/predict" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Add a Sentence" id="first_name" name="sentence" type="text" class="validate">
+          <label for="first_name">Sentence</label>
+        </div>
+     
+      </div>
+	  <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="Add a Aspect string" id="first_name" name="aspect" type="text" class="validate">
+          <label for="first_name">Aspect</label>
+        </div>
+     
+      </div>
+	  
+	  <div class="row">
+        <div class="input-field	 col s6">
+          <button class="waves-effect waves-light btn-large" type="submit">Submit</button>
+        </div>
+     
+      </div>
+    </form>
+	<div class="row">
+	<div class="col offset-s3 s6">
+	<h4> Sentence : <span>{{sentence}}</span></h4>
+	<h4>Aspect : <span>{{aspect}}</span></h4>
+	<h4>Label : <span>{{label}}</span></h4>
+	</div>
+	</div>
+  </div>
+
+	
+</body>
+</html>
