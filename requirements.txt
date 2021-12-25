@@ -1,6 +1,7 @@
-tensorflow
+tensorflow-cpu
 pandas
 numpy
 fastapi
 python-multipart
 jinja2
+aiofiles

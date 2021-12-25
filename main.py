@@ -20,7 +20,7 @@ async def root(request: Request):
     
 @app.post("/predict/")
 async def create_item(request: Request, sentence: str = Form("sentence"), aspect : str = Form("aspect")):
-    print(sentence)
+    
     label=pred(sentence, aspect)[0]
     label_dict={
         0:"Negative",
